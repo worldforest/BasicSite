@@ -5,16 +5,22 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import java.time.Year;
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 public class AddHistoryRequest {
+    private int index;
     private String companyname;
     private String classname;
-
+    private Year year;
+//
     public History toEntity(){
         return History.builder()
+                .index(index)
                 .companyname(companyname)
-                .classname(classname).build();
+                .classname(classname)
+                .year(year).build();
     }
 }

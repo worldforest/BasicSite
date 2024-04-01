@@ -6,6 +6,8 @@ import kr.jaen.history.repository.HistoryRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @RequiredArgsConstructor
 @Service
 public class HistoryService {
@@ -13,5 +15,8 @@ public class HistoryService {
 
     public History save(AddHistoryRequest request){
         return historyRepository.save(request.toEntity());
+    }
+    public List<History> getAllHistory(){
+        return historyRepository.findAll();
     }
 }

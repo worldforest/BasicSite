@@ -1,0 +1,59 @@
+/* 
+/* 
+/*  custom.css
+/*
+/*  If not using Gulp and Sass, add your custom CSS below then include it
+/*  in your page by adding a reference to assets/css/custom.css in the head of each page.
+/*
+*/
+
+/* 홈화면 이미지 흘러가도록 */
+.image-flow, .image-flow2 {
+  padding: 1%;
+  width: 100%;
+  /* 넘치는 이미지 숨기기 */
+  overflow: hidden; 
+  /* 이미지들이 가로로 나란히 배치되도록 설정 */
+  white-space: nowrap;
+}
+
+.image-flow img {
+  display: inline-block;
+  width: 100%;
+  animation: slide 20s linear infinite;
+  /* 이미지가 10초 동안 좌에서 우로 이동하도록 설정 */
+}
+
+
+.image-flow2 img {
+  display: inline-block;
+  width: 100%;
+  animation: slide-inverse 20s linear infinite;
+  /* 이미지가 10초 동안 좌에서 우로 이동하도록 설정 */
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    /* 이미지를 왼쪽으로 이동하여 다시 시작 위치로 돌아가도록 설정 */
+    transform: translateX(-66.66%);
+  }
+}
+@keyframes slide-inverse {
+  0% {
+    transform: translateX(-66.66%);
+  }
+
+  100% {
+    /* 이미지를 왼쪽으로 이동하여 다시 시작 위치로 돌아가도록 설정 */
+    transform: translateX(0);
+  }
+}
+
+
+.bg-jaen {
+  background-color: var(--jaen-green2); 
+ }
