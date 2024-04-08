@@ -1,8 +1,8 @@
-package kr.jaen.history.service;
+package kr.jaen.service;
 
-import kr.jaen.history.domain.History;
-import kr.jaen.history.dto.AddHistoryRequest;
-import kr.jaen.history.repository.HistoryRepository;
+import kr.jaen.domain.History;
+import kr.jaen.dto.HistoryDto;
+import kr.jaen.repository.HistoryRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +13,7 @@ import java.util.List;
 public class HistoryService {
     private final HistoryRepository historyRepository;
 
-    public History save(AddHistoryRequest request){
+    public History save(HistoryDto request){
         return historyRepository.save(request.toEntity());
     }
     public List<History> getAllHistory(){

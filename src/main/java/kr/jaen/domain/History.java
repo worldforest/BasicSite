@@ -1,4 +1,4 @@
-package kr.jaen.history.domain;
+package kr.jaen.domain;
 
 import jakarta.persistence.*;
 import lombok.*;

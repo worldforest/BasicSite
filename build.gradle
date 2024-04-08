@@ -2,13 +2,13 @@ plugins {
 	id 'java'
 	id 'org.springframework.boot' version '3.2.3'
 	id 'io.spring.dependency-management' version '1.1.4'
+    id 'org.jetbrains.kotlin.jvm'
 }
 
 group = 'com.basic'
 version = '1.0'
 
 java {
-	sourceCompatibility = '17'
 }
 
 configurations {
@@ -31,8 +31,12 @@ dependencies {
 
 	// db mysql로 설정
 	runtimeOnly 'com.mysql:mysql-connector-j'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
 }
 
 tasks.named('test') {
 	useJUnitPlatform()
+}
+kotlin {
+    jvmToolchain(17)
 }

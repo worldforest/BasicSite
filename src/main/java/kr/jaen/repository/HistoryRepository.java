@@ -1,6 +1,6 @@
-package kr.jaen.history.repository;
+package kr.jaen.repository;
 
-import kr.jaen.history.domain.History;
+import kr.jaen.domain.History;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

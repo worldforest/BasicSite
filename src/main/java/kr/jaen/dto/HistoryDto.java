@@ -1,6 +1,6 @@
-package kr.jaen.history.dto;
+package kr.jaen.dto;
 
-import kr.jaen.history.domain.History;
+import kr.jaen.domain.History;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,7 +10,7 @@ import java.time.Year;
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
-public class AddHistoryRequest {
+public class HistoryDto {
     private int index;
     private String companyname;
     private String classname;
