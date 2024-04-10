@@ -15,4 +15,9 @@ public class ClassService {
     public List<Class> getAllClass(){
         return classRepository.findAll();
     }
+
+    // category별 강의목록 조회
+    public List<Class> findByCategoryId(Integer categoryId) {
+        return classRepository.findByCategoryId(categoryId);
+    }
 }
