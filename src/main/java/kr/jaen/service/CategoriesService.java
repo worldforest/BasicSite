@@ -11,7 +11,7 @@ import java.util.List;
 @Service
 public class CategoriesService {
     private final CategoriesRepository categoriedRepository;
-    public List<Categories> getAllCategories(){
+    public List<Categories> getAll(){
         return categoriedRepository.findAll();
     }
 }

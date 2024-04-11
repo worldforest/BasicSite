@@ -16,7 +16,7 @@ public class HistoryService {
     public History save(HistoryDto request){
         return historyRepository.save(request.toEntity());
     }
-    public List<History> getAllHistory(){
+    public List<History> getAll(){
         return historyRepository.findAll();
     }
 }

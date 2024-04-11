@@ -12,7 +12,7 @@ import java.util.List;
 public class ClassService {
 
     private final ClassRepository classRepository;
-    public List<Class> getAllClass(){
+    public List<Class> getAll(){
         return classRepository.findAll();
     }
 
