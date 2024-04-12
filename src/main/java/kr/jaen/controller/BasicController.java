@@ -1,14 +1,14 @@
 package kr.jaen.controller;
 
-import kr.jaen.domain.Categories;
+import kr.jaen.domain.Category;
 import kr.jaen.domain.Class;
 import kr.jaen.domain.History;
-import kr.jaen.domain.SubCategories;
+import kr.jaen.domain.SubCategory;
 import kr.jaen.dto.HistoryDto;
-import kr.jaen.service.CategoriesService;
+import kr.jaen.service.CategoryService;
 import kr.jaen.service.ClassService;
 import kr.jaen.service.HistoryService;
-import kr.jaen.service.SubCategoriesService;
+import kr.jaen.service.SubCategoryService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,10 +23,10 @@ public class BasicController {
 
 private final HistoryService historyService;
 private final ClassService classService;
-private final CategoriesService categoriedService;
-private final SubCategoriesService subCategoriesService;
+private final CategoryService categoryService;
+private final SubCategoryService subCategoryService;
 
-    @GetMapping("/jaen/class/category")
+    @GetMapping("/class/category")
     public List<Class> getClassByCategory(@RequestParam Integer categoryId){
         System.out.println(">>> category_id: "+categoryId);
         List<Class> classByCategory = classService.findByCategoryId(categoryId);
@@ -34,29 +34,35 @@ private final SubCategoriesService subCategoriesService;
         return classByCategory;
     }
 
-    @GetMapping("/jaen/class")
+    @GetMapping("/class/subcategory")
+    public List<Class> getClassBySubcategory(@RequestParam Integer subcategoryId){
+        List<Class> classBySubCategory = classService.findBySubcategoryId(subcategoryId);
+        return classBySubCategory;
+    }
+
+    @GetMapping("/class")
     public List<Class> getAllClass(){
         List<Class> allClass = classService.getAll();
         return allClass;
     }
     
     // 대분류 전체 카테고리
-    @GetMapping("/jaen/categories")
-    public List<Categories> getAllCategories(){
-        List<Categories> allCategories = categoriedService.getAll();
+    @GetMapping("/categories")
+    public List<Category> getAllCategories(){
+        List<Category> allCategories = categoryService.getAll();
         return allCategories;
     }
 
-    @GetMapping("/jaen/subcategories")
-    public List<SubCategories> getAllSubCategories(){
-        List<SubCategories> allSubCategories = subCategoriesService.getAll();
+    @GetMapping("/subcategories")
+    public List<SubCategory> getAllSubCategories(){
+        List<SubCategory> allSubCategories = subCategoryService.getAll();
         return allSubCategories;
     }
 
     @GetMapping("/subcategory")
-    public List<SubCategories> getSubCategoryByCategoryId(@RequestParam Integer categoryId){
+    public List<SubCategory> getSubCategoryByCategoryId(@RequestParam Integer categoryId){
         System.out.println("선택된 categoryId: "+categoryId);
-        List<SubCategories> selectedSubCategories = subCategoriesService.findByCategoryId(categoryId);
+        List<SubCategory> selectedSubCategories = subCategoryService.findByCategoryId(categoryId);
         return selectedSubCategories;
     }
 

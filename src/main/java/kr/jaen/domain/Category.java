@@ -11,7 +11,7 @@ import lombok.*;
 @Getter
 @Setter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class Categories {
+public class Category {
 
     @Id
     @Column(name="category_id", updatable = false)
@@ -20,7 +20,7 @@ public class Categories {
     private String name;
 
     @Builder
-    public Categories(int category_id, String name){
+    public Category(int category_id, String name){
         this.category_id= category_id;
         this.name=name;
     }

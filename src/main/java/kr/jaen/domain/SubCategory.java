@@ -11,7 +11,7 @@ import lombok.*;
 @Getter
 @Setter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class SubCategories {
+public class SubCategory {
 
     @Id
     @Column(name="subcategory_id", updatable = false)
@@ -22,7 +22,7 @@ public class SubCategories {
     private int categoryId;
 
     @Builder
-    public SubCategories(int subcategory_id, String name, int categoryId){
+    public SubCategory(int subcategory_id, String name, int categoryId){
         this.subcategory_id= subcategory_id;
         this.name=name;
         this.categoryId=categoryId;

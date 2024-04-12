@@ -1,19 +1,18 @@
 package kr.jaen.dto;
 
-import kr.jaen.domain.Categories;
+import kr.jaen.domain.Category;
 import lombok.AllArgsConstructor;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 
 @AllArgsConstructor
 @NoArgsConstructor
-public class CategoriesDto {
+public class CategoryDto {
     private int category_id;
     private String name;
 
-    public Categories toEntity(){
-        return Categories.builder()
+    public Category toEntity(){
+        return Category.builder()
                 .category_id(category_id)
                 .name(name)
                 .build();

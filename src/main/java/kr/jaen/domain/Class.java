@@ -21,7 +21,7 @@ public class Class {
     @Column(name = "category_id", updatable = false)
     private int categoryId;
     @Column(name = "subcategory_id", updatable = false)
-    private int subcategory_id;
+    private int subcategoryId;
     @Column(name = "level", updatable = false)
     private int level;
     @Column(name = "description", updatable = false)
@@ -40,11 +40,11 @@ public class Class {
     private String technology_stack;
 
     @Builder
-    public Class(int index,String title,int categoryId,int subcategory_id,int level,String description,String duration,String environment,String target,String background,String goal,String technology_stack){
+    public Class(int index,String title,int categoryId,int subcategoryId,int level,String description,String duration,String environment,String target,String background,String goal,String technology_stack){
         this.index = index;
         this.title = title;
         this.categoryId = categoryId;
-        this.subcategory_id = subcategory_id;
+        this.subcategoryId = subcategoryId;
         this.level = level;
         this.description= description;
         this.duration=duration;

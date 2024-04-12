@@ -20,4 +20,7 @@ public class ClassService {
     public List<Class> findByCategoryId(Integer categoryId) {
         return classRepository.findByCategoryId(categoryId);
     }
+    public List<Class> findBySubcategoryId(Integer subcategoryId) {
+        return classRepository.findBySubcategoryId(subcategoryId);
+    }
 }

@@ -13,7 +13,7 @@ public class ClassDto {
     private int index;
     private String title;
     private int categoryId;
-    private int subcategory_id;
+    private int subcategoryId;
     private int level;
     private String description;
     private String duration;
@@ -28,7 +28,7 @@ public class ClassDto {
                 .index(index)
                 .title(title)
                 .categoryId(categoryId)
-                .subcategory_id(subcategory_id)
+                .subcategoryId(subcategoryId)
                 .level(level)
                 .description(description)
                 .duration(duration)

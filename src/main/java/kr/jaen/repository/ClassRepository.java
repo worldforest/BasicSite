@@ -10,4 +10,5 @@ import java.util.List;
 public interface ClassRepository extends JpaRepository<Class, Integer> {
     // category별 강의목록 조회
     List<Class> findByCategoryId(Integer categoryId);
+    List<Class> findBySubcategoryId(Integer subcategoryId);
 }
