@@ -35,6 +35,10 @@ dependencies {
 	// db mysql로 설정
 	runtimeOnly 'com.mysql:mysql-connector-j'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+
+	implementation 'org.springframework.boot:spring-boot-starter-mail'
+	//jakarta.mail
+	implementation group: 'com.sun.mail', name: 'jakarta.mail', version: '2.0.1'
 }
 
 tasks.named('test') {
